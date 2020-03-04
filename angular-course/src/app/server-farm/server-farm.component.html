@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-9">
+    <input id="serverName" name="serverName" type="text" class="form-control" [(ngModel)]="serverName"
+      (input)="onChangeServerName()" placeholder="Server name">
+  </div>
+  <div class="col-xs-3">
+    <button class="btn btn-primary" [disabled]="serverName.length === 0" (click)="onCreateServer()">Add Server</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p *ngIf="serverCreated; else noServer">
+      Server created. Server name is {{ serverName }}
+    </p>
+    <ng-template #noServer>
+      <p>No server created yet</p>
+    </ng-template>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-server *ngFor="let server of servers"></app-server>
+  </div>
+</div>
