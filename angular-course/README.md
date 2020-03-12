@@ -1,4 +1,4 @@
-# AngularCourse
+# angular-course
 
 Test project with components creation, classes, attributes, properties, binding.
 
