@@ -3,7 +3,7 @@
     <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
     <hr>
     <ul class="list-group">
-      <a href="#" class="list-group-item" *ngFor="let item of ingredients">{{ item.name }} ({{ item.amount }})</a>
+      <a appHighlight href="#" class="list-group-item" *ngFor="let item of ingredients">{{ item.name }} ({{ item.amount }})</a>
     </ul>
   </div>
 </div>
